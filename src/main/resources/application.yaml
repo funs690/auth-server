@@ -1,0 +1,45 @@
+server:
+  port: 8081
+
+#日志配置
+logging:
+  config: classpath:logback-spring.xml
+
+sa-token:
+  token-name: sgt
+  oauth2:
+    is-code: true
+    is-client: true
+    is-implicit: true
+    is-password: true
+  is-print: false
+
+# redis
+spring:
+
+  datasource:
+    url: jdbc:postgresql://183.129.217.214:20080/authdb
+    username: auth
+    password: Abc123++
+    driver-class-name: org.postgresql.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+    hikari:
+      minimum-idle: 5
+      maximum-pool-size: 100
+      connection-test-query: SELECT 'x'
+      keepalive-time: 60000
+  redis:
+    database: 9
+    host: 183.129.217.214
+    port: 20192
+    password: QAZwsx123++
+    timeout: 60s
+    lettuce:
+      pool:
+        max-active: 200
+        max-idle: 50
+        min-idle: 10
+        time-between-eviction-runs: 60000
+  jpa:
+    hibernate:
+      ddl-auto: validate
