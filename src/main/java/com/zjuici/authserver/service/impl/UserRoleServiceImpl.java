@@ -3,10 +3,10 @@ package com.zjuici.authserver.service.impl;
 import com.zjuici.authserver.dao.po.UserRole;
 import com.zjuici.authserver.dao.repository.UserRoleRepository;
 import com.zjuici.authserver.service.UserRoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 /**
  * @ClassName UserRoleServiceImpl
@@ -21,7 +21,7 @@ public class UserRoleServiceImpl implements UserRoleService {
     /**
      * userRoleRepository
      */
-    @Resource
+    @Autowired
     private UserRoleRepository userRoleRepository;
 
     @Override

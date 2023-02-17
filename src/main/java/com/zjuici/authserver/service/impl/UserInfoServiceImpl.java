@@ -3,10 +3,11 @@ package com.zjuici.authserver.service.impl;
 import com.zjuici.authserver.dao.po.UserInfo;
 import com.zjuici.authserver.dao.repository.UserInfoRepository;
 import com.zjuici.authserver.service.UserInfoService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
+
 
 /**
  * @ClassName UserInfoServiceImpl
@@ -21,7 +22,7 @@ public class UserInfoServiceImpl implements UserInfoService {
     /**
      * userInfoRepository
      */
-    @Resource
+    @Autowired
     private UserInfoRepository userInfoRepository;
 
     @Override

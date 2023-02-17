@@ -3,11 +3,10 @@ package com.zjuici.authserver.service.impl;
 import com.zjuici.authserver.dao.po.User;
 import com.zjuici.authserver.dao.repository.UserRepository;
 import com.zjuici.authserver.service.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
-
-import javax.annotation.Resource;
 
 /**
  * @ClassName UserServiceImpl
@@ -22,7 +21,7 @@ public class UserServiceImpl implements UserService {
     /**
      * userRepository
      */
-    @Resource
+    @Autowired
     private UserRepository userRepository;
 
     @Override

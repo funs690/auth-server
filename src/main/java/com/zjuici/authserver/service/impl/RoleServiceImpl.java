@@ -3,10 +3,10 @@ package com.zjuici.authserver.service.impl;
 import com.zjuici.authserver.dao.po.Role;
 import com.zjuici.authserver.dao.repository.RoleRepository;
 import com.zjuici.authserver.service.RoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 /**
  * @ClassName RoleServiceImpl
@@ -21,7 +21,7 @@ public class RoleServiceImpl implements RoleService {
     /**
      * roleRepository
      */
-    @Resource
+    @Autowired
     private RoleRepository roleRepository;
 
 

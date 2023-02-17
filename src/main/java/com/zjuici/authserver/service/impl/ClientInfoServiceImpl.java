@@ -3,12 +3,11 @@ package com.zjuici.authserver.service.impl;
 import com.zjuici.authserver.dao.po.ClientInfo;
 import com.zjuici.authserver.dao.repository.ClientInfoRepository;
 import com.zjuici.authserver.service.ClientInfoService;
-import org.checkerframework.checker.units.qual.C;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 /**
  * @ClassName ClientInfoImpl
@@ -23,7 +22,7 @@ public class ClientInfoServiceImpl implements ClientInfoService {
     /**
      * clientInfoRepository
      */
-    @Resource
+    @Autowired
     private ClientInfoRepository clientInfoRepository;
 
 

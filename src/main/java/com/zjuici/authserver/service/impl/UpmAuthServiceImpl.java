@@ -3,10 +3,10 @@ package com.zjuici.authserver.service.impl;
 import com.zjuici.authserver.dao.po.UpmAuth;
 import com.zjuici.authserver.dao.repository.UpmAuthRepository;
 import com.zjuici.authserver.service.UpmAuthService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Service;
 
-import javax.annotation.Resource;
 
 /**
  * @ClassName UpmAuthServiceImpl
@@ -18,7 +18,7 @@ import javax.annotation.Resource;
 @Service
 public class UpmAuthServiceImpl implements UpmAuthService {
 
-    @Resource
+    @Autowired
     private UpmAuthRepository upmAuthRepository;
 
     @Override
